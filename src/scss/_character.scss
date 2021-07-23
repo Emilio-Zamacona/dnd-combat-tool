@@ -1,23 +1,33 @@
 .character {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background: $dark-blue;
-  padding: 15px;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: $dark-blue;
+    padding: 15px;
+    margin: 10px;
+  }
   &__name {
-    width: 120px;
+    width: 200px;
     color: $skin;
   }
   &__att {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 200px;
+    h2{
+      width: 75px;
+    }
+
   }
   &__buttonBox {
     display: flex;
     flex-direction: column;
     padding-inline: 20px;
+  }
+  &__ul {
+    padding: 20px;
+
   }
 }
 
@@ -33,16 +43,8 @@
   color: white;
   background-color: $red;
 }
-.add-form {
-  width: 40%;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  input {
-    padding: 10px;
-  }
-}
+
+
 .btn-value {
   height: 30px;
   width: 30px;

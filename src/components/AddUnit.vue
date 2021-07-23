@@ -1,20 +1,47 @@
 <template>
-  <div>
-    <form v-on:submit.prevent="addUnit" class="add-form">
-      <div>
-        <h1>Add Unit</h1>
-        <button @click="$store.commit('addBoxOpen')">X</button>
+  <div class="addUnit">
+    <form v-on:submit.prevent="addUnit" class="addUnit__form">
+      <h1 class="addUnit__form__title">Add Unit</h1>
+
+      <div class="addUnit__form__att">
+        <h2 class="addUnit__form__label">Name:</h2>
+        <input
+          class="addUnit__form__input"
+          v-model="newUnit.name"
+          placeholder="name"
+        />
       </div>
-
-      <input v-model="newUnit.name" placeholder="name" />
-      <input v-model.number="newUnit.hp" type="number" placeholder="hp" />
-
-      <input
-        v-model.number="newUnit.initiative"
-        type="number"
-        placeholder="initiative"
-      />
-      <button type="submit">Add Unit</button>
+      <div class="addUnit__form__att">
+        <h2 class="addUnit__form__label">HP:</h2>
+        <input
+          class="addUnit__form__input"
+          v-model.number="newUnit.hp"
+          type="number"
+          placeholder="hp"
+        />
+      </div>
+      <div class="addUnit__form__att">
+        <h2 class="addUnit__form__label">Initiative:</h2>
+        <input
+          class="addUnit__form__input"
+          v-model.number="newUnit.initiative"
+          type="number"
+          placeholder="initiative"
+        />
+      </div>
+      <div class="addUnit__form__att">
+        <h2 class="addUnit__form__label">Unit is a Player</h2>
+        <input
+          class="addUnit__form__checkbox"
+          type="checkbox"
+          id="checkbox"
+          v-model="newUnit.isPlayer"
+        />
+      </div>
+      <div class="addUnit__form__buttons">
+        <button type="submit">✔</button>
+        <button @click="$store.commit('addBoxOpen')">✖</button>
+      </div>
     </form>
   </div>
 </template>

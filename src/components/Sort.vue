@@ -2,7 +2,7 @@
   <div>
     <h2>Sort by:</h2>
     <div v-for="att in attributeList" :key="att">
-      <button @click="sortMethod(att)">{{ att }}</button>
+      <button @click="sortMethod(att)">{{ att }} &#11165;&#11167;</button>
     </div>
   </div>
 </template>
@@ -41,7 +41,6 @@ export default {
       }
       this.sortBy = s;
       this.sortUnits();
-      console.log(this.sortUnits);
     },
   },
 };

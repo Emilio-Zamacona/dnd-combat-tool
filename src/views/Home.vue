@@ -3,9 +3,12 @@
     <h2>Battle Assistant</h2>
     <button @click="$store.commit('addBoxOpen')">Add Unit</button>
     <AddUnit v-if="addingUnits" />
-    <div>
-      <Sort :attributeList="['hp', 'initiative', 'name']" />
-      <ul>
+    <div class="character">
+      <Sort
+        v-if="units.length != 0"
+        :attributeList="['hp', 'initiative', 'name', 'isPlayer']"
+      />
+      <ul class="character__ul">
         <Character
           v-for="unit in st.units"
           :key="unit.id"
@@ -42,7 +45,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["addingUnits", "totalUnits"]),
+    ...mapGetters(["addingUnits", "totalUnits", "units"]),
     st() {
       return this.$store.state;
     },

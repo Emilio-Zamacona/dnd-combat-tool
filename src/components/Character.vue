@@ -1,6 +1,9 @@
 <template>
-  <div class="character">
-    <h1 class="character__name">{{ unitName }}</h1>
+  <div class="character__container">
+    <h1 class="character__name">
+      {{ unitName }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ unitIsPlayer ? "🍺" : "" }}
+    </h1>
+
     <div class="character__att">
       <h2 :class="isLow ? 'low' : 'alive'">HP: {{ unitHp }}</h2>
       <div class="character__buttonBox">
