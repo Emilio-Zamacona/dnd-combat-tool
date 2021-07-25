@@ -1,15 +1,21 @@
+@import "mixins";
 .character {
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: $dark-blue;
+    background: $color3;
     padding: 15px;
     margin: 10px;
+    &:focus {
+      background-color: $color2;
+
+    }
+
   }
   &__name {
     width: 200px;
-    color: $skin;
+    color: $color1;
   }
   &__att {
     display: flex;
@@ -32,24 +38,24 @@
 }
 
 .alive {
-  color: $green;
+  color: $color2;
+  @include text1;
 }
 
 .dead {
-  color: $red;
+  color: $color6;
   font-style: italic;
 }
 .low {
   color: white;
-  background-color: $red;
+  background-color: $color6;
 }
-
-
 .btn-value {
   height: 30px;
   width: 30px;
   font-size: 20px;
-  background-color: $skin;
   margin: 5px;
-  color: $dark-blue;
+  @include button2
+
+
 }

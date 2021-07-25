@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <h2>Battle Assistant</h2>
-    <button @click="$store.commit('addBoxOpen')">Add Unit</button>
+    <h2 class="home__title">Battle Assistant</h2>
+    <button class="home__addUnit" @click="$store.commit('addBoxOpen')">
+      Add Unit
+    </button>
     <AddUnit v-if="addingUnits" />
     <div class="character">
       <Sort

@@ -1,5 +1,5 @@
 <template>
-  <div class="character__container">
+  <div :tabindex="unitId" class="character__container">
     <h1 class="character__name">
       {{ unitName }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ unitIsPlayer ? "🍺" : "" }}
     </h1>
@@ -16,14 +16,14 @@
       {{ isAlive ? "vivo" : "muerto" }}
     </h2>
     <div class="character__att">
-      <h2>{{ unitInitiative }}</h2>
+      <h2 class="alive">{{ unitInitiative }}</h2>
       <div class="character__buttonBox">
         <button @click="unitInitiative += 1" class="btn-value">+</button>
         <button @click="unitInitiative -= 1" class="btn-value">-</button>
       </div>
     </div>
 
-    <button @click="removeSelf">X</button>
+    <button class="btn-value" @click="removeSelf">X</button>
   </div>
 </template>
 

@@ -1,0 +1,10 @@
+@import "mixins";
+
+.sort {
+  &__title {
+    @include text2
+  }
+  &__button {
+    @include button1
+  }
+}
