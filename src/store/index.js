@@ -8,6 +8,7 @@ export default new Vuex.Store({
     units: [],
     totalUnits: 0,
     addingUnits: false,
+    lastTouchedUnit: null,
   },
   mutations: {
     sortUnits(state, { sortBy, order }) {
@@ -26,6 +27,12 @@ export default new Vuex.Store({
     addBoxOpen(state) {
       state.addingUnits = !state.addingUnits;
     },
+    changeAttValue(state, { id, att, amount }) {
+      state.units.find((x) => x.id == id)[att] += amount;
+    },
+    changeTouchedUnit(state, unit) {
+      state.lastTouchedUnit = unit;
+    },
   },
   actions: {},
   modules: {},
@@ -38,6 +45,9 @@ export default new Vuex.Store({
     },
     units: (state) => {
       return state.units;
+    },
+    lastTouchedUnit: (state) => {
+      return state.lastTouchedUnit;
     },
   },
 });

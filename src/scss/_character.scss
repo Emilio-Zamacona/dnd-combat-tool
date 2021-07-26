@@ -1,21 +1,26 @@
 @import "mixins";
 .character {
+  display: flex;
+  align-items: center;
+  &__removeButton{
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    margin: 5px;
+
+  }
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: $color3;
-
     margin: 10px;
-    &:focus {
-      background-color: $color2;
-
-    }
 
   }
   &__name {
+    user-select: none;
     width: 200px;
-    color: $color1;
+    color: $a-100;
+    padding-inline: 30px;
   }
   &__att {
     display: flex;
@@ -30,32 +35,16 @@
     display: flex;
     flex-direction: column;
     padding-inline: 20px;
+    &__valueBtn {
+      height: 30px;
+      width: 30px;
+      font-size: 20px;
+      margin: 5px;
+
+    }
   }
   &__ul {
-margin: 0;
 
   }
 }
 
-.alive {
-  color: $color2;
-  @include text1;
-}
-
-.dead {
-  color: $color6;
-  font-style: italic;
-}
-.low {
-  color: white;
-  background-color: $color6;
-}
-.btn-value {
-  height: 30px;
-  width: 30px;
-  font-size: 20px;
-  margin: 5px;
-  @include button2
-
-
-}

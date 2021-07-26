@@ -1,0 +1,33 @@
+
+.alive {
+  color: $b-200;
+  @include text1;
+}
+
+.dead {
+  color: $c-400;
+  font-style: italic;
+}
+.low {
+  color: white;
+  background-color: $c-400;
+}
+.active {
+  filter: brightness(1.4);
+}
+.isPlayer {
+  background: $b-400;
+  button {
+    background: $b-200;
+    color: $e-1000;
+    border: 2px $a-100 solid;
+  }
+}
+.notPlayer {
+  background: $c-200;
+  button {
+    background: $c-100;
+    color: $e-1000;
+    border: 2px $a-100 solid;
+  }
+}

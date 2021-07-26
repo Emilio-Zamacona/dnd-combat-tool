@@ -1,18 +1,18 @@
 @import "variables";
 @mixin text1{
   font-family: $font1;
-  color: $color5;
+  color: $e-1000;
 }
 @mixin text2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: $color2;
+  color: $b-400;
 }
 @mixin button1 {
-background: $color1;
-color: $color5;
+background: $a-100;
+color: $e-1000;
 }
 @mixin button2 {
-background: $color2;
-color: $color5;
-border: 2px $color1 solid;
+background: $b-400;
+color: $e-1000;
+border: 2px $b-200 solid;
 }

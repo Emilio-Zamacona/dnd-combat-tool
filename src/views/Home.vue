@@ -5,14 +5,14 @@
       Add Unit
     </button>
     <AddUnit v-if="addingUnits" />
-    <div class="character">
+    <div class="home__characters">
       <Sort
-        v-if="units.length != 0"
-        :attributeList="['hp', 'initiative', 'name', 'isPlayer']"
+        v-if="units.length > 1"
+        :attributeList="['name', 'hp', 'initiative']"
       />
       <ul class="character__ul">
         <Character
-          v-for="unit in st.units"
+          v-for="unit in units"
           :key="unit.id"
           :name="unit.name"
           :hp="unit.hp"
@@ -36,7 +36,9 @@ export default {
   name: "Home",
   components: { Character, AddUnit, Sort },
   data: function () {
-    return {};
+    return {
+      lastUnitTouched: null,
+    };
   },
   methods: {},
   watch: {

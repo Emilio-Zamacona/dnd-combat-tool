@@ -1,0 +1,23 @@
+@import "mixins";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    @include text2;
+    width: 200px;
+  }
+  &__addUnit {
+    width: 100px;
+    height: 50px;
+    @include button2;
+    @include text1;
+    font-size: large;
+  }
+  &__characters {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
