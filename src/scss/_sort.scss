@@ -1,6 +1,9 @@
 @import "mixins";
 
 .sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   &__title {
     @include text2
   }

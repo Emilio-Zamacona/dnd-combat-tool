@@ -11,10 +11,6 @@
         <button @click="unitHp -= 1" class="btn-value">-</button>
       </div>
     </div>
-
-    <h2 :class="isAlive ? 'alive' : 'dead'">
-      {{ isAlive ? "vivo" : "muerto" }}
-    </h2>
     <div class="character__att">
       <h2 class="alive">{{ unitInitiative }}</h2>
       <div class="character__buttonBox">
@@ -28,6 +24,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "Character",
   components: {},
@@ -52,6 +49,7 @@ export default {
     },
   },
   computed: {
+    ...mapGetters(["totalUnits"]),
     isAlive: function () {
       return this.unitHp > 0;
     },
