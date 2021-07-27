@@ -5,12 +5,13 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+max-width: 480px;
   &__title {
     @include text2;
     padding-right:20px
   }
   &__button {
     @include button1;
-    margin-right: 140px;
+
   }
 }

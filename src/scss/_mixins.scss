@@ -1,11 +1,21 @@
 @import "variables";
+@import "mediaqueries";
 @mixin text1{
   font-family: $font1;
   color: $e-1000;
+  font-size: large;
+  @include phone {
+    font-size:smaller
+  }
+
 }
 @mixin text2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: $b-400;
+  font-size: x-large;
+  @include phone {
+    font-size:large
+  }
 }
 @mixin button1 {
 background: $a-100;

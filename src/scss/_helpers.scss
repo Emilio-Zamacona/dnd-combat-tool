@@ -13,7 +13,9 @@
   background-color: $c-400;
 }
 .active {
-  filter: brightness(1.4);
+
+  filter:grayscale(0.85) brightness(1.5);
+
 }
 .isPlayer {
   background: $b-400;

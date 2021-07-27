@@ -1,11 +1,25 @@
+@import "mediaqueries";
+@import "mixins";
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   background: $e-1000;
   width: 100%;
   height: 100vh;
+
 }
 ul {
   margin: 0;
   padding: 0;
 }
-
+h2 {
+  @include text1
+}
+h1 {
+  @include text2
+}
+button {
+  user-select: none;
+}

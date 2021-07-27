@@ -11,25 +11,26 @@
   }
   &__container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-around;
     margin: 10px;
+    width: 85%;
 
   }
   &__name {
     user-select: none;
-    width: 200px;
+    width: 25vw;
     color: $a-100;
     padding-inline: 30px;
+    margin: 0;
+padding: 20px;
+    text-align: center;
   }
   &__att {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    h2{
-      width: 75px;
-    }
-
+    width: 25vw;
   }
   &__buttonBox {
     display: flex;
